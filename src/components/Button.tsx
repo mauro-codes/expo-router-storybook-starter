@@ -5,14 +5,12 @@ export type MyButtonProps = {
   onPress?: () => void;
   text: string;
   disabled?: boolean;
-  type?: "primary" | "secondary" | "tertiary";
 };
 
 export const MyButton: React.FC<MyButtonProps> = ({
   onPress,
   text,
   disabled,
-  type,
 }) => {
   return (
     <TouchableOpacity
@@ -21,16 +19,7 @@ export const MyButton: React.FC<MyButtonProps> = ({
       activeOpacity={0.8}
       disabled={disabled}
     >
-      <Text
-        style={[
-          styles.text,
-          {
-            fontSize: type === "primary" ? 16 : 12,
-          },
-        ]}
-      >
-        {text}
-      </Text>
+      <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };
