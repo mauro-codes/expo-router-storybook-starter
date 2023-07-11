@@ -2,10 +2,10 @@ import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
 export type MyButtonProps = {
-  onPress: () => void;
+  onPress?: () => void;
   text: string;
-  disabled: boolean;
-  type: "primary" | "secondary" | "tertiary";
+  disabled?: boolean;
+  type?: "primary" | "secondary" | "tertiary";
 };
 
 export const MyButton: React.FC<MyButtonProps> = ({
