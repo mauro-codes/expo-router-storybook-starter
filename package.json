@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "expo start",
+    "start": "sb-rn-get-stories && expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -37,6 +37,14 @@
     "@storybook/addon-ondevice-controls": "^6.5.4",
     "@storybook/react-native": "^6.5.4",
     "babel-loader": "^8.3.0"
+  },
+  "expo": {
+    "install": {
+      "exclude": [
+        "@react-native-async-storage/async-storage",
+        "@react-native-community/datetimepicker"
+      ]
+    }
   },
   "name": "expo-router-storybook-starter",
   "version": "1.0.0",
