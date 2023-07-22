@@ -1,7 +1,7 @@
 # Storybook with Expo Router v2, SDK 49 & TypeScript
 
 - Working starter template that uses [`expo-router v2`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
-- It includes Storybook configured with a few stories using TypeScript.
+- It includes Storybook Web & Native configured with a few stories using TypeScript.
 - You can update the .env file to disable or enable storybook on your app.
 - It uses new features like Path Aliases, Opt out from package version validation, and client environment variables.
 
@@ -9,7 +9,12 @@
 
 ```sh
 npm install
+
+# Run on native
 npm start
+
+# Run on web
+npm run storybook:web
 ```
 
 If you want to disable storybook to work on your app, update the `.env` file like this:
@@ -18,8 +23,10 @@ If you want to disable storybook to work on your app, update the `.env` file lik
 EXPO_PUBLIC_STORYBOOK_ENABLED=false
 ```
 
-You can learn more in the article I wrote for this starter
-[Using Storybook with Expo Router v2, SDK 49 & TypeScript](https://blog.spirokit.com/using-storybook-with-expo-router-v2-sdk-49-typescript)
+You can learn more in these articles I wrote for this starter
+
+- [Using Storybook with Expo Router v2, SDK 49 & TypeScript](https://blog.spirokit.com/using-storybook-with-expo-router-v2-sdk-49-typescript)
+- [Setting Up Storybook Web and Native with Expo Router v2, SDK 49, and TypeScript](https://blog.spirokit.com/setting-up-storybook-web-and-native-with-expo-router-v2-sdk-49-and-typescript)
 
 ## 📝 Notes
 
