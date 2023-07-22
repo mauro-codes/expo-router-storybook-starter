@@ -1,11 +1,13 @@
 {
   "scripts": {
-    "start": "sb-rn-get-stories && expo start",
+    "start": "sb-rn-get-stories --config-path .storybook/native && expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "storybook-generate": "sb-rn-get-stories",
-    "storybook-watch": "sb-rn-watcher"
+    "storybook-watch": "sb-rn-watcher",
+    "storybook:web": "start-storybook --config-dir .storybook/web -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "expo": "^49.0.0",
@@ -33,9 +35,18 @@
     "@react-native-community/slider": "^4.4.2",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-controls": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
     "@storybook/addon-ondevice-actions": "^6.5.4",
     "@storybook/addon-ondevice-controls": "^6.5.4",
+    "@storybook/addon-react-native-web": "^0.0.21",
     "@storybook/react-native": "^6.5.4",
+    "@storybook/react": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "babel-plugin-react-docgen-typescript": "^1.5.1",
+    "babel-plugin-react-native-web": "^0.18.10",
+    "metro-react-native-babel-preset": "^0.77.0",
     "babel-loader": "^8.3.0"
   },
   "expo": {
@@ -45,6 +56,14 @@
         "@react-native-community/datetimepicker"
       ]
     }
+  },
+  "resolutions": {
+    "react-docgen-typescript": "2.2.2",
+    "@storybook/react-docgen-typescript-plugin": "1.0.6--canary.9.cd77847.0"
+  },
+  "overrides": {
+    "react-docgen-typescript": "2.2.2",
+    "@storybook/react-docgen-typescript-plugin": "1.0.6--canary.9.cd77847.0"
   },
   "name": "expo-router-storybook-starter",
   "version": "1.0.0",

@@ -15,7 +15,7 @@ const Index = () => {
 let EntryPoint = Index;
 
 if (storybookEnabled) {
-  const StorybookUI = require("../.storybook").default;
+  const StorybookUI = require("../.storybook/native").default;
   EntryPoint = () => {
     return (
       <View style={{ flex: 1 }}>

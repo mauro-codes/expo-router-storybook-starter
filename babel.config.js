@@ -5,6 +5,7 @@ module.exports = function (api) {
     plugins: [
       "react-native-reanimated/plugin",
       require.resolve("expo-router/babel"),
+      ["babel-plugin-react-docgen-typescript", { exclude: "node_modules" }],
     ],
   };
 };
